@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Home Page displayed]]>
+    </line>
+    <line>
+      <![CDATA[login successful]]>
+    </line>
+    <line>
+      <![CDATA[Computer Title is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Home Page displayed]]>
+    </line>
+    <line>
+      <![CDATA[login successful]]>
+    </line>
+    <line>
+      <![CDATA[error message not displayed]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="64185" started-at="2019-09-10T17:03:20Z" finished-at="2019-09-10T17:04:24Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="64185" started-at="2019-09-10T17:03:20Z" finished-at="2019-09-10T17:04:24Z">
+      <class name="scripts.LoginTest">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:scripts.LoginTest@5f2108b5]" name="startTest" is-config="true" duration-ms="537" started-at="2019-09-10T17:03:20Z" finished-at="2019-09-10T17:03:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method status="PASS" signature="openApp(java.lang.String)[pri:0, instance:scripts.LoginTest@5f2108b5]" name="openApp" is-config="true" duration-ms="16176" started-at="2019-09-10T17:03:21Z" finished-at="2019-09-10T17:03:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method status="PASS" signature="validLogin()[pri:1, instance:scripts.LoginTest@5f2108b5]" name="validLogin" duration-ms="3462" started-at="2019-09-10T17:03:37Z" finished-at="2019-09-10T17:03:40Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Home Page displayed]]>
+            </line>
+            <line>
+              <![CDATA[login successful]]>
+            </line>
+            <line>
+              <![CDATA[Computer Title is displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.LoginTest@5f2108b5]" name="closeApp" is-config="true" duration-ms="4942" started-at="2019-09-10T17:03:40Z" finished-at="2019-09-10T17:03:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validLogin status=SUCCESS method=LoginTest.validLogin()[pri:1, instance:scripts.LoginTest@5f2108b5] output=Home Page displayed]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="openApp(java.lang.String)[pri:0, instance:scripts.LoginTest@5f2108b5]" name="openApp" is-config="true" duration-ms="12738" started-at="2019-09-10T17:03:45Z" finished-at="2019-09-10T17:03:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method status="FAIL" signature="invalidLogin()[pri:2, instance:scripts.LoginTest@5f2108b5]" name="invalidLogin" duration-ms="22942" started-at="2019-09-10T17:03:58Z" finished-at="2019-09-10T17:04:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.fail(Assert.java:103)
+at page.LoginPage.verifyErrorMsg(LoginPage.java:89)
+at scripts.LoginTest.invalidLogin(LoginTest.java:91)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Home Page displayed]]>
+            </line>
+            <line>
+              <![CDATA[login successful]]>
+            </line>
+            <line>
+              <![CDATA[error message not displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method status="PASS" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.LoginTest@5f2108b5]" name="closeApp" is-config="true" duration-ms="1324" started-at="2019-09-10T17:04:21Z" finished-at="2019-09-10T17:04:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=invalidLogin status=FAILURE method=LoginTest.invalidLogin()[pri:2, instance:scripts.LoginTest@5f2108b5] output=Home Page displayed]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:scripts.LoginTest@5f2108b5]" name="endTest" is-config="true" duration-ms="1921" started-at="2019-09-10T17:04:23Z" finished-at="2019-09-10T17:04:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- scripts.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
